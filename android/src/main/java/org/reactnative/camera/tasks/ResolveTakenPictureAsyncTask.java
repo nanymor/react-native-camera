@@ -88,8 +88,8 @@ public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, Writable
                         ExifInterface.ORIENTATION_UNDEFINED);
 
                 // Rotate the bitmap to the proper orientation if needed
-                if (mOptions.hasKey("fixOrientation") && mOptions.getBoolean("fixOrientation") && orientation != ExifInterface.ORIENTATION_UNDEFINED) {
-                    mBitmap = rotateBitmap(mBitmap, getImageRotation(orientation));
+                if (mOptions.hasKey("fixOrientation") && mOptions.getBoolean("fixOrientation")) {
+                    mBitmap = rotateBitmap(mBitmap, 270);
                 }
 
                 if (mOptions.hasKey("width")) {
