@@ -89,7 +89,7 @@ public class ResolveTakenPictureAsyncTask extends AsyncTask<Void, Void, Writable
 
                 // Rotate the bitmap to the proper orientation if needed
                 if (mOptions.hasKey("fixOrientation") && mOptions.getBoolean("fixOrientation")) {
-                    mBitmap = rotateBitmap(mBitmap, 270);
+                    mBitmap = rotateBitmap(mBitmap, 90);
                 }
 
                 if (mOptions.hasKey("width")) {
